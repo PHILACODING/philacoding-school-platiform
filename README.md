@@ -1,42 +1,36 @@
-# 🚀 Philacoding School & Organisation Digital Platforms
+<div align="center">
 
-**Philacoding** designs and develops modern websites and complete digital systems for **schools, organisations, businesses, and institutions**.
+<img src="./philacoding_logo.jpg" alt="Philacoding Logo" width="180">
 
-Our projects range from professional public-facing websites to full-stack platforms that provide online applications, assessments, data management, dashboards, authentication, APIs, databases, and other digital services.
+#  Philacoding School & Organisation Digital Platforms
 
-This repository contains the ongoing development of the **Siphesihle High School Website and Digital Platform**.
+**Building modern websites, full-stack applications, and complete digital platforms for schools, organisations, businesses, and institutions.**
 
----
-
-## 🌐 Live Project
-
-### 🏫 Siphesihle High School Website
-
-A modern school website currently under active development.
-
-**Live Website:**
-https://philacoding.github.io/philacoding-school-platiform/
-
-**GitHub Repository:**
-https://github.com/PHILACODING/philacoding-school-platiform
-
-The website is being developed as the foundation for a broader digital school platform, with additional online services being introduced progressively.
+</div>
 
 ---
 
-# 🖼️ Featured Projects
+## 🌐 About Philacoding
 
-## 🏫 Siphesihle High School Website
+**Philacoding** designs and develops modern digital solutions that go beyond traditional websites.
 
-![Siphesihle High School Website](./sipsihle-high-school.png)
+We build everything from professional public-facing websites to **complete full-stack digital platforms** incorporating online applications, assessments, authentication, APIs, databases, dashboards, data processing, automation, and other digital services.
 
-A modern school website providing information and digital services for learners, parents, teachers, prospective applicants, alumni, and the wider school community.
+This repository contains the ongoing development of the **Siphesihle High School Website & Digital Platform**.
 
-**Current areas include:**
+---
+
+# 🏫 Featured Project
+
+## Siphesihle High School Website & Digital Platform
+
+A modern school website being developed as the foundation for a broader digital platform serving learners, parents, teachers, prospective applicants, alumni, and the wider school community.
+
+### Current Features
 
 * 🏠 School information
 * 📚 Academics
-* 👨‍🏫 Leadership and staff
+* 👨‍🏫 Leadership & staff
 * 👨‍👩‍👧 Parents
 * 🎓 Alumni
 * ⚽ Sports
@@ -46,20 +40,25 @@ A modern school website providing information and digital services for learners,
 * 📞 Contact information
 * 📱 Responsive web design
 
-**View the website:**
+### 🔗 Project Links
+
+**Live Website:**
 https://philacoding.github.io/philacoding-school-platiform/
+
+**GitHub Repository:**
+https://github.com/PHILACODING/philacoding-school-platiform
 
 ---
 
-## 💻 Philacoding Developer Platform
+# 💻 Philacoding Developer Platform
 
-![Philacoding Developer Platform](./philacoding-developer-platform.png)
+The **Philacoding Developer Platform** is a separate project focused on software development, programming, data engineering, artificial intelligence, machine learning, and developer resources.
 
-The **Philacoding Developer Platform** is a separate project focused on software development, technology, programming, data engineering, AI, and developer resources.
+It serves as a platform for developing and demonstrating software engineering knowledge, projects, tools, APIs, and intelligent digital solutions.
 
-It serves as a platform for building and demonstrating software engineering knowledge, projects, tools, and intelligent digital solutions.
+### 🔗 Project Links
 
-**Website:**
+**Developer Platform:**
 https://github.com/PHILACODING/Philacoding_Developer_Platform
 
 **GitHub Organisation:**
@@ -69,54 +68,64 @@ https://github.com/PHILACODING
 
 # 🏗️ What Philacoding Builds
 
-Philacoding focuses on developing complete digital solutions rather than only creating static websites.
+Philacoding focuses on developing **complete digital solutions**, rather than only static websites.
 
-### 🌐 Websites
+## 🌐 Websites
 
 Professional websites for:
 
-* Schools
-* Businesses
-* Organisations
-* Institutions
-* Community organisations
-* Educational platforms
-* Personal and professional brands
+* 🏫 Schools
+* 🏢 Businesses
+* 🌍 Organisations
+* 🏛️ Institutions
+* 🤝 Community organisations
+* 📚 Educational platforms
+* 👤 Personal & professional brands
 
-### 🖥️ Full-Stack Web Applications
+---
 
-Complete systems containing:
+## 🖥️ Full-Stack Digital Systems
+
+Complete systems can be built around an architecture such as:
 
 ```text
 Frontend
-   ↓
+    ↓
 Backend
-   ↓
+    ↓
 REST APIs
-   ↓
-Database
-   ↓
-Authentication
-   ↓
+    ↓
 Business Logic
-   ↓
+    ↓
+Database
+    ↓
+Authentication & Authorisation
+    ↓
+Dashboards & Digital Services
+    ↓
 Deployment
 ```
 
-### 📝 Online Application Systems
+The exact architecture and technology stack depends on the requirements of each project.
+
+---
+
+## 📝 Online Application Systems
 
 Digital application platforms can include:
 
 * Online application forms
 * Applicant registration
 * Form validation
-* Document uploads
+* Document submission
 * Application tracking
-* Administrative review
 * Application status
+* Administrative review
 * Database storage
 
-### 🧠 Online Assessment Systems
+---
+
+## 🧠 Online Assessment Systems
 
 Digital assessment platforms can include:
 
@@ -127,14 +136,17 @@ Digital assessment platforms can include:
 * Automatic marking
 * Results
 * Assessment history
-* Teacher/admin management
+* Teacher and administrator management
 
-### 📊 Data & Business Systems
+---
 
-Systems can also incorporate:
+## 📊 Data & Business Systems
+
+Philacoding can also develop systems incorporating:
 
 * SQL databases
 * Data processing
+* Data pipelines
 * Dashboards
 * Reporting
 * Data analysis
@@ -145,9 +157,9 @@ Systems can also incorporate:
 
 ---
 
-# 🛠️ Technology
+# 🛠️ Technology Stack
 
-Depending on the requirements of each project, Philacoding can work across a modern technology stack.
+The technology stack is selected according to the **requirements, functionality, scale, security, and deployment environment** of each project.
 
 ### Frontend
 
@@ -163,7 +175,7 @@ Depending on the requirements of each project, Philacoding can work across a mod
 * REST APIs
 * Backend services
 
-### Data & Databases
+### Databases & Data
 
 * SQL
 * PostgreSQL
@@ -171,7 +183,7 @@ Depending on the requirements of each project, Philacoding can work across a mod
 * Data pipelines
 * Data analytics
 
-### Data & AI
+### AI & Machine Learning
 
 * Python
 * Pandas
@@ -190,15 +202,13 @@ Depending on the requirements of each project, Philacoding can work across a mod
 * CI/CD
 * API integrations
 
-The technology stack is selected according to the requirements, scale, security, and functionality of each project.
-
 ---
 
-# 🏫 Siphesihle High School Platform — Development Roadmap
+# 🏫 Siphesihle High School Platform — Roadmap
 
-The Siphesihle High School project is being developed incrementally.
+The Siphesihle High School project is being developed incrementally, allowing new functionality to be introduced as the platform evolves.
 
-### Phase 1 — Public Website ✅
+## Phase 1 — Public Website ✅
 
 * [x] School homepage
 * [x] School information
@@ -213,7 +223,7 @@ The Siphesihle High School project is being developed incrementally.
 * [x] GitHub repository
 * [x] Live deployment
 
-### Phase 2 — Online Applications 🚧
+## Phase 2 — Online Applications 🚧
 
 * [ ] Application forms
 * [ ] Applicant information
@@ -223,7 +233,7 @@ The Siphesihle High School project is being developed incrementally.
 * [ ] Application status
 * [ ] Administration interface
 
-### Phase 3 — Online Assessments 🚧
+## Phase 3 — Online Assessments 🚧
 
 * [ ] Assessment system
 * [ ] Question management
@@ -232,7 +242,7 @@ The Siphesihle High School project is being developed incrementally.
 * [ ] Results
 * [ ] Assessment history
 
-### Phase 4 — Full-Stack Platform 🚧
+## Phase 4 — Full-Stack Platform 🚧
 
 * [ ] Backend API
 * [ ] Database
@@ -244,7 +254,7 @@ The Siphesihle High School project is being developed incrementally.
 * [ ] Dashboards
 * [ ] Role-based access
 
-### Phase 5 — Advanced Digital Services 🚀
+## Phase 5 — Advanced Digital Services 🚀
 
 Future functionality may include:
 
@@ -262,29 +272,29 @@ Future functionality may include:
 
 # 🔄 Development Philosophy
 
-Philacoding projects are developed continuously.
+Philacoding follows an **iterative development approach**.
 
-A project does not have to be completely finished before it becomes useful.
+A digital platform does not need to be completely finished before it can start providing value.
 
-The development process follows an iterative approach:
+Projects can begin with a functional website and progressively evolve into more advanced digital systems.
 
 ```text
 Plan
- ↓
+  ↓
 Build
- ↓
+  ↓
 Test
- ↓
+  ↓
 Deploy
- ↓
+  ↓
 Collect Feedback
- ↓
+  ↓
 Improve
- ↓
+  ↓
 Repeat
 ```
 
-This allows organisations and schools to start with a functional website and progressively introduce more advanced digital services.
+This approach allows organisations to introduce digital services progressively while continuously improving the platform.
 
 ---
 
@@ -302,15 +312,15 @@ git commit -m "Describe the changes"
 git push
 ```
 
-The live website can then be updated as development progresses.
+Changes can then be deployed to the live environment as development progresses.
 
 ---
 
 # 🔐 Security & Privacy
 
-For systems handling sensitive information, security and privacy are considered throughout development.
+For systems handling sensitive information, security and privacy are considered throughout the development lifecycle.
 
-Sensitive information should never be committed to GitHub, including:
+Sensitive information should **never** be committed to GitHub, including:
 
 * Passwords
 * API keys
@@ -320,7 +330,15 @@ Sensitive information should never be committed to GitHub, including:
 * Private user information
 * Confidential organisational records
 
-Production systems will use appropriate authentication, authorization, secure configuration, database security, and deployment practices.
+Production systems should use appropriate:
+
+* Authentication
+* Authorisation
+* Secure configuration
+* Database security
+* Access controls
+* Environment management
+* Deployment security
 
 ---
 
@@ -328,35 +346,35 @@ Production systems will use appropriate authentication, authorization, secure co
 
 The goal is to help organisations move beyond having **"just a website."**
 
-A modern organisation can have a complete digital environment:
+A modern organisation can have an integrated digital environment where its website connects to the services and systems it needs.
 
 ```text
-                 ORGANISATION
-                      │
-          ┌───────────┴───────────┐
-          ↓                       ↓
-      PUBLIC WEBSITE        DIGITAL SERVICES
-          │                       │
-          ↓                       ↓
-   Information & Content    Online Applications
-                                  │
-                                  ↓
-                           Online Assessments
-                                  │
-                                  ↓
-                              Accounts
-                                  │
-                                  ↓
-                              Database
-                                  │
-                                  ↓
-                             Dashboards
-                                  │
-                                  ↓
-                           Administration
+                    ORGANISATION
+                         │
+             ┌───────────┴───────────┐
+             ↓                       ↓
+      PUBLIC WEBSITE          DIGITAL SERVICES
+             │                       │
+             ↓                       ↓
+    Information & Content     Online Applications
+                                     │
+                                     ↓
+                              Online Assessments
+                                     │
+                                     ↓
+                                  Accounts
+                                     │
+                                     ↓
+                                  Database
+                                     │
+                                     ↓
+                                 Dashboards
+                                     │
+                                     ↓
+                              Administration
 ```
 
-Philacoding aims to build these systems as **connected, scalable, full-stack digital platforms**.
+Philacoding aims to build these systems as **connected, scalable, and practical full-stack digital platforms**.
 
 ---
 
@@ -364,7 +382,7 @@ Philacoding aims to build these systems as **connected, scalable, full-stack dig
 
 **Philacoding** is a software development and technology initiative focused on building practical digital solutions.
 
-Areas of development include:
+### Areas of Development
 
 * 🌐 Web Development
 * 🖥️ Full-Stack Software Development
@@ -379,7 +397,7 @@ Areas of development include:
 
 ---
 
-# 🔗 Links
+# 🔗 Philacoding Links
 
 ### 🏫 Siphesihle High School Website
 
@@ -401,10 +419,28 @@ https://www.philacoding.com
 
 # 🚀 Projects in Development
 
-This repository is part of a growing collection of Philacoding projects designed to demonstrate practical software engineering, data, AI, and digital-platform development.
+This repository is part of a growing collection of **Philacoding projects** designed to demonstrate practical software engineering, data, artificial intelligence, and digital-platform development.
 
-**Build → Deploy → Learn → Improve → Repeat.**
+The long-term objective is to create useful technology that solves real problems for schools, organisations, businesses, and communities.
+
+```text
+Build
+  ↓
+Deploy
+  ↓
+Learn
+  ↓
+Improve
+  ↓
+Repeat
+```
 
 ---
 
-> **Philacoding — Building digital platforms for organisations, schools, and businesses. 🚀**
+<div align="center">
+
+## 🚀 Philacoding
+
+**Building digital platforms for schools, organisations, businesses, and institutions.**
+
+</div>

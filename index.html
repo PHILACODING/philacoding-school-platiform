@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siphesihle High School | Academic & Digital Platform</title>  
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #12355b;
+            --primary-light: #1d6fb8;
+            --accent: #f3bd4b;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid var(--border);
+        }
+
+        .nav-container {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid var(--primary-light);
+            box-shadow: var(--shadow);
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .motto {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn-apply-tab {
+            background: var(--primary-light);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.2s ease !important;
+        }
+
+        .btn-apply-tab:hover {
+            background: #155896 !important;
+            transform: translateY(-1px);
+        }
+
+        /* DROPDOWN MENU FOR NAVIGATION */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-lg);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            list-style: none;
+            padding: 10px 0;
+            z-index: 1100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li {
+            position: relative;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 20px;
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            white-space: nowrap;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-light);
+            color: var(--primary-light);
+        }
+
+        .dropdown-submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: white;
+            min-width: 200px;
+            box-shadow: var(--shadow-lg);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .dropdown-menu li:hover .dropdown-submenu {
+            display: block;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .primary {
+            background: var(--primary-light);
+            color: white;
+        }
+
+        .primary:hover {
+            background: #155896;
+            transform: translateY(-1px);
+        }
+
+        .secondary {
+            background: white;
+            color: var(--primary);
+            border: 1.5px solid var(--border);
+        }
+
+        .secondary:hover {
+            border-color: var(--primary-light);
+            background: var(--bg-light);
+        }
+
+        /* HERO SECTION & SLIDER */
+        .hero {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0fa 100%);
+            padding: 60px 0 80px 0;
+        }
+
+        .hero-banner {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            color: var(--primary-light);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero-banner h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero-banner h1 span {
+            color: var(--primary-light);
+        }
+
+        .hero-banner p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Front Page Slow Motion Left-to-Right Slider */
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid white;
+        }
+
+        .slider-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: white;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .light-bg {
+            background: var(--bg-light);
+        }
+
+        /* ADMISSIONS */
+        .admission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .admission-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+
+        .application-box {
+            border: 1px solid var(--border);
+            padding: 36px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        /* ASSESSMENT SECTION */
+        .assessment {
+            background: linear-gradient(135deg, var(--primary) 0%, #0a213a 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 60px;
+            margin: 40px 0;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .assessment-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+        }
+
+        .assessment-box {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius);
+        }
+
+        /* EVENTS */
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .event {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 20px 24px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: white;
+        }
+
+        .event-img {
+            width: 90px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .date-badge {
+            min-width: 60px;
+            height: 60px;
+            background: #eef5fb;
+            color: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .date-badge .day {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        .date-badge .month {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        /* CONTACT FORM */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-info-item i {
+            color: var(--primary-light);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #081524;
+            color: white;
+            padding: 60px 0 30px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .admission-grid, .assessment-grid, .contact-grid, .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .slider-wrapper {
+                height: 300px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .dropdown-menu, .dropdown-submenu {
+                position: static;
+                box-shadow: none;
+                border: none;
+                padding-left: 15px;
+            }
+
+            .hero-banner h1 {
+                font-size: 2.4rem;
+            }
+
+            .assessment {
+                padding: 30px;
+            }
+
+            .event {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .event-img {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <!-- 🖼️ IMAGE SPOT 1: MAIN NAVIGATION SCHOOL LOGO -->
+                <!-- Place your logo file path below inside src="..." (e.g., src="logo.png" or src="images/logo.png") -->
+                <img src="logo.jpg" alt="Siphesihle High School Logo" class="logo-img">
+                <div>
+                    <div class="school-name">Siphesihle High School</div>
+                    <div class="motto">Ukukhanya Makwande</div>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#about">About <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#history">History of the School</a></li>
+                        <li><a href="#staff">Staff</a></li>
+                        <li><a href="#sgb">School Governing Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#academics">Academics <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#caps-curriculum">CAPS Curriculum</a></li>
+                        <li><a href="#academic-support">Academic Support</a></li>
+                        <li><a href="#online-learning">Online Learning</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#assessment"><i class="fa-solid fa-laptop-code"></i> Online Portal <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#assessment">Student Portal <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem; float: right; margin-top: 4px;"></i></a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#assessment">Assessments</a></li>
+                                <li><a href="#assessment">Results</a></li>
+                                <li><a href="#events">Timetable</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#assessment">Teacher Portal</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#admissions" class="btn-apply-tab"><i class="fa-solid fa-paper-plane"></i> Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH SLOW MOTION SLIDER -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-banner">
+                <div class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Welcome to Siphesihle High School</div>
+                <h1>Ukukhanya<span>  Makwande.</span></h1>
+                <p>Empowering over 1,000 learners in Inchanga through quality education, discipline, and modern digital learning tools.</p>
+            </div>
+
+            <div class="slider-wrapper">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- 🖼️ IMAGE SPOT 2: HERO SLIDER IMAGE 1 -->
+                    <div class="slide"><img src="slide_02.jpg" alt="Siphesihle High School Slide 1"></div>
+
+                    <!-- 🖼️ IMAGE SPOT 3: HERO SLIDER IMAGE 2 -->
+                    <div class="slide"><img src="slide_03.jpg" alt="Siphesihle High School Slide 2"></div>
+
+                    <!-- 🖼️ IMAGE SPOT 4: HERO SLIDER IMAGE 3 -->
+                    <div class="slide"><img src="slide_04.jpg" alt="Siphesihle High School Slide 3"></div>
+
+                    <!-- 🖼️ IMAGE SPOT 5: HERO SLIDER IMAGE 4 -->
+                    <div class="slide"><img src="slide_05.jpg" alt="Siphesihle High School Slide 4"></div>
+
+                    <!-- 🖼️ IMAGE SPOT 6: HERO SLIDER IMAGE 5 -->
+                    <div class="slide"><img src="slide_06.jpg" alt="Siphesihle High School Slide 5"></div>
+
+                    <!-- 🖼️ IMAGE SPOT 7: HERO SLIDER IMAGE 6 -->
+                    <div class="slide"><img src="slide_07.jpg" alt="Siphesihle High School Slide 6"></div>
+
+                    <!-- 🖼️ IMAGE SPOT 8: HERO SLIDER IMAGE 7 -->
+                    <div class="slide"><img src="slide_02.jpg" alt="Siphesihle High School Slide 7"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">About Our Institution</div>
+                <h2>A school connected to its community</h2>
+            </div>
+            <div class="cards">
+                <div class="card" id="history">
+                    <!-- 🖼️ IMAGE SPOT 9: ABOUT SECTION - OUR SCHOOL CARD -->
+                    <img src="about.jpg" alt="Siphesihle High Building" class="card-img">
+                    <h3>History of the School</h3>
+                    <p>Siphesihle High School (registered as Siphesihle Secondary School) is a public Quintile 3 No-Fee secondary school serving Ward 4 of the Hammarsdale Circuit in Inchanga.</p>
+                </div>
+                <div class="card" id="staff">
+                    <!-- 🖼️ IMAGE SPOT 10: ABOUT SECTION - LEADERSHIP CARD -->
+                    <img src="leadership.jpg" alt="School Leadership and Staff" class="card-img">
+                    <h3>Staff</h3>
+                    <p>Led by Principal Mr. D. S. Dube alongside a dedicated staff of over 30 educators maintaining an effective student-to-teacher ratio for continuous growth.</p>
+                </div>
+                <div class="card" id="sgb">
+                    <!-- 🖼️ IMAGE SPOT 11: ABOUT SECTION - CORE VALUES CARD -->
+                    <img src="about.jpg" alt="Learners and School Culture" class="card-img">
+                    <h3>School Governing Board</h3>
+                    <p>Our active School Governing Body (SGB) works in close partnership with school management, parents, and community leaders to steer growth, governance, and learner welfare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMICS SECTION -->
+    <section id="academics" class="light-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">Academics</div>
+                <h2>Learning comes first</h2>
+            </div>
+            <div class="cards">
+                <div class="card" id="caps-curriculum">
+                    <!-- 🖼️ IMAGE SPOT 12: ACADEMICS SECTION - CAPS CURRICULUM CARD -->
+                    <img src="academics.jpg" alt="CAPS Curriculum Classroom" class="card-img">
+                    <h3>CAPS Curriculum</h3>
+                    <p>Comprehensive CAPS curriculum for Grades 8 through 12, preparing students for National Senior Certificate success.</p>
+                </div>
+                <div class="card" id="academic-support">
+                    <!-- 🖼️ IMAGE SPOT 13: ACADEMICS SECTION - ACADEMIC SUPPORT CARD -->
+                    <img src="tutoring.jpg" alt="Academic Tutoring Support" class="card-img">
+                    <h3>Academic Support</h3>
+                    <p>Structured after-school tutoring, exam revision workshops, and mentorship from experienced educators.</p>
+                </div>
+                <div class="card" id="online-learning">
+                    <!-- 🖼️ IMAGE SPOT 14: ACADEMICS SECTION - DIGITAL ASSESSMENTS CARD -->
+                    <img src="computers.jpg" alt="Digital Assessments Lab" class="card-img">
+                    <h3>Online Learning</h3>
+                    <p>Integrated daily testing modules and interactive digital learning resources allowing learners to track understanding and continuous progress online.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISSIONS SECTION -->
+    <section id="admissions">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">Admissions</div>
+                <h2>Start your journey with us</h2>
+            </div>
+            <div class="admission-grid">
+                <div>
+                    <h3>Enrollment for the Academic Year</h3>
+                    <p style="margin-top: 10px; color: var(--text-muted);">Applications are open for Grades 8 to 12. Ensure all required documentation (Learner Birth Certificate, Latest School Report, Guardian ID) is ready before submission.</p>
+                    
+                    <!-- 🖼️ IMAGE SPOT 15: ADMISSIONS SECTION - BANNER/LOGO IMAGE -->
+                    <img src="logo.jpg" alt="Admissions and Enrollment" class="admission-img">
+                </div>
+                <div class="application-box">
+                    <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Online Application</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">Complete your registration digitally via our secure portal.</p>
+                    <button class="btn primary" onclick="alert('Siphesihle High Online Application Portal opens soon!')" style="width: 100%; justify-content: center;">Start Online Application</button>
+                    
+                    <hr style="margin: 24px 0; border: 0; border-top: 1px solid var(--border);">
+                    
+                    <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Download Form</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">Prefer manual submission? Download the application form to complete offline.</p>
+                    <button class="btn secondary" onclick="alert('Downloading Siphesihle High Application Form PDF...')" style="width: 100%; justify-content: center;"><i class="fa-solid fa-download"></i> Download Form (PDF)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT PLATFORM -->
+    <section id="assessment" class="container">
+        <div class="assessment">
+            <div class="eyebrow" style="color: var(--accent);">Digital Portal</div>
+            <h2 style="font-size: 2.4rem;">Online Assessment & Academic Portal</h2>
+            
+            <div class="assessment-grid">
+                <div>
+                    <!-- 🖼️ IMAGE SPOT 16: ASSESSMENT SECTION - PORTAL PREVIEW IMAGE -->
+                    <img src="academics.jpg" alt="Learner Assessment Portal" class="assessment-img">
+                    <p style="color: #cbd5e1; font-size: 1.05rem;">Teachers publish tailored test assessments daily. Learners sign in to access assigned tests, view academic results, and view class timetables.</p>
+                    <div class="buttons" style="margin-top: 24px;">
+                        <button class="btn primary" onclick="alert('Student Portal Gateway')" style="background: var(--accent); color: var(--text-dark);"><i class="fa-solid fa-right-to-bracket"></i> Student Portal</button>
+                        <button class="btn secondary" onclick="alert('Teacher Portal Gateway')" style="background: transparent; color: white; border-color: rgba(255,255,255,0.3);"><i class="fa-solid fa-lock"></i> Teacher Portal</button>
+                    </div>
+                </div>
+                <div class="assessment-box">
+                    <strong style="color: var(--accent); display: block; margin-bottom: 8px;"><i class="fa-solid fa-circle-exclamation"></i> Assessment Protocol</strong>
+                    <p style="font-size: 0.9rem; color: #e2e8f0; margin: 0;">Each learner can take <strong>ONE</strong> online assessment per 24-hour cycle. Test timers lock automatically upon submission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events" class="light-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">School Calendar</div>
+                <h2>Upcoming Events & Dates</h2>
+            </div>
+            <div class="events-list">
+                <div class="event">
+                    <div class="date-badge"><span class="day">15</span><span class="month">OCT</span></div>
+                    <!-- 🖼️ IMAGE SPOT 17: EVENTS - WORKSHOP EVENT IMAGE -->
+                    <img src="workshop.png" alt="Academic Workshop" class="event-img">
+                    <div>
+                        <strong>Academic Support & Workshop Day</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Extra tutorial sessions for Grade 11 & 12 exam candidates.</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date-badge"><span class="day">22</span><span class="month">OCT</span></div>
+                    <!-- 🖼️ IMAGE SPOT 18: EVENTS - SPORTS DAY EVENT IMAGE -->
+                    <img src="sport_02.jpg" alt="Sports Day" class="event-img">
+                    <div>
+                        <strong>Annual Inter-House Sports & Culture Tournament</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Athletics and sports competitions on the school grounds.</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date-badge"><span class="day">30</span><span class="month">OCT</span></div>
+                    <!-- 🖼️ IMAGE SPOT 19: EVENTS - PTA MEETING EVENT IMAGE -->
+                    <img src="parents.jpg" alt="Parent Meeting" class="event-img">
+                    <div>
+                        <strong>Parent-Teacher Association Meeting</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Community review meeting with school management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">Contact Us</div>
+                <h2>Get in touch with Siphesihle High</h2>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Phone Office</strong>
+                            <p style="color: var(--text-muted);">071 877 7991 / 031 783 5348 / 072 768 9857</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email Address</strong>
+                            <p style="color: var(--text-muted);">mabongimkhize49@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Physical Address</strong>
+                            <p style="color: var(--text-muted);">168C Laybe Road (Behind Fredville Clinic)<br>Fredville, Inchanga, 3670<br>Hammarsdale Circuit, Ward 4, KZN</p>
+                        </div>
+                    </div>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully to Siphesihle High School!');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <textarea rows="4" placeholder="Your Message or Enquiry" required></textarea>
+                    <button type="submit" class="btn primary" style="width: 100%; justify-content: center;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <!-- 🖼️ IMAGE SPOT 20: FOOTER LOGO IMAGE -->
+                    <img src="logo.jpg" alt="Logo" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;">
+                    <div>
+                        <h3 style="color: white; margin-bottom: 2px;">Siphesihle High School</h3>
+                        <p style="color: #94a3b8; font-size: 0.85rem;">EMIS: 500267399 | Hammarsdale Circuit | Ward 4</p>
+                    </div>
+                </div>
+                <div style="color: #94a3b8; font-size: 0.9rem;">
+                    &copy; 2026 Siphesihle High School Academic Platform. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT FOR NAVIGATION & SLOW-MOTION SLIDER -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        /* Slow motion left-to-right slider script */
+        const track = document.getElementById('sliderTrack');
+        const slides = document.querySelectorAll('#sliderTrack .slide');
+        const totalSlides = slides.length;
+        
+        let currentSlide = totalSlides - 1;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        function slideLeftToRight() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(slideLeftToRight, 3500);
+    </script>
+</body>
+</html>

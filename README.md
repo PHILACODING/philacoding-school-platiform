@@ -24,7 +24,7 @@ This repository contains the ongoing development of the **Siphesihle High School
 
 ## Siphesihle High School Website & Digital Platform
 
-A modern school website being developed as the foundation for a broader digital platform serving learners, parents, teachers, prospective applicants, alumni, and the wider school community.
+A public school website and connected digital platform serving learners, parents, teachers, prospective applicants, alumni, and the wider school community.
 
 ### Current Features
 
@@ -43,10 +43,34 @@ A modern school website being developed as the foundation for a broader digital 
 ### 🔗 Project Links
 
 **Live Website:**
-https://philacoding.github.io/philacoding-school-platform/
+https://philacoding.github.io/philacoding-school-platiform/
 
 **GitHub Repository:**
-https://github.com/PHILACODING/philacoding-school-platform
+https://github.com/PHILACODING/philacoding-school-platiform
+
+### Public platform architecture
+
+```text
+Learner or applicant browser
+            ↓
+GitHub Pages frontend
+            ↓
+Render FastAPI backend
+            ↓
+Supabase PostgreSQL database
+```
+
+GitHub Pages serves the public website. Render runs authentication, applications, document uploads, assessment scoring, and protected teacher queries. Supabase stores schools, users, applications, assessment questions, submissions, results, and uploaded document bytes.
+
+The public frontend must be configured with the deployed Render API URL. A local `localhost:8000` API URL works only on the developer's computer.
+
+### Deployment files
+
+* [render.yaml](render.yaml) configures the Render backend service.
+* [.github/workflows/pages.yml](.github/workflows/pages.yml) deploys the frontend to GitHub Pages.
+* [database/schema.sql](database/schema.sql) creates the PostgreSQL schema.
+* [database/seed.sql](database/seed.sql) creates safe demo school data.
+* [docs/SETUP.md](docs/SETUP.md) contains local and free-tier deployment instructions.
 
 ---
 
@@ -201,6 +225,51 @@ The technology stack is selected according to the **requirements, functionality,
 * Cloud platforms
 * CI/CD
 * API integrations
+
+---
+
+# ▶️ Run Locally
+
+## Prerequisites
+
+* Python 3.11 or newer
+* PostgreSQL
+* Git
+
+Create the local database, apply `database/schema.sql` and `database/seed.sql`, and copy `backend/.env.example` to `backend/.env`. Set `DATABASE_URL` to the local PostgreSQL connection string.
+
+Start the API from the repository root:
+
+```powershell
+.\scripts\start-backend.ps1
+```
+
+Start the frontend in a second terminal:
+
+```powershell
+py -m http.server 5500
+```
+
+Open `http://localhost:5500`. The API health check is available at `http://localhost:8000/api/v1/health`.
+
+Local demo accounts created by `database/seed.sql`:
+
+* Learner: student number `26123456`, password `ChangeMe123!`
+* Teacher: employee ID `T2347233`, password `ChangeMe123!`
+
+These accounts are for development only. Change or remove them before public use.
+
+## Free public deployment
+
+The free-tier deployment uses GitHub Pages, Render, and Supabase:
+
+1. Create a Supabase project and run `database/schema.sql` followed by `database/seed.sql` in its SQL Editor.
+2. Create a Render Web Service from this GitHub repository.
+3. Configure Render with `DATABASE_URL`, `SECRET_KEY`, `CORS_ORIGINS`, `API_ENV=production`, and `DEFAULT_SCHOOL_SLUG=siphesihle-high-school`.
+4. Set the frontend API URL to the deployed Render URL followed by `/api/v1`.
+5. Push the change to GitHub and verify the GitHub Pages site.
+
+Free services may sleep when idle and have storage, traffic, and database limits. Do not use real learner records or documents until privacy, access control, backups, and retention requirements have been reviewed.
 
 ---
 

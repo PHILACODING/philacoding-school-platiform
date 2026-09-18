@@ -534,6 +534,16 @@
             display: none;
         }
 
+        .portal-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: cover;
+            border-radius: 7px;
+            border: 1px solid rgba(255,255,255,0.55);
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
         /* TEACHER PORTAL & APPLICATION STYLES */
         .portal-tabs {
             display: flex;
@@ -847,6 +857,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="frontend/css/mobile.css">
 </head>
 <body>
 
@@ -854,8 +865,7 @@
     <nav>
         <div class="container nav-container">
             <div class="logo-area">
-                <!-- 🖼️ IMAGE SPOT 1: MAIN NAVIGATION SCHOOL LOGO -->
-                <img src="logo.jpg" alt="Siphesihle High School Logo" class="logo-img">
+                <img src="frontend/assets/images/logo.jpg" alt="Siphesihle High School Logo" class="logo-img">
                 <div>
                     <div class="school-name">Siphesihle High School</div>
                     <div class="motto">Ukukhanya Makwande</div>
@@ -895,7 +905,7 @@
                             <ul class="dropdown-submenu">
                                 <li><a href="javascript:void(0)" onclick="openAuthModal()">Assessments</a></li>
                                 <li><a href="javascript:void(0)" onclick="openResultsModal()">Results</a></li>
-                                <li><a href="timetable.jpg" target="_blank">Timetable</a></li>
+                                <li><a href="frontend/assets/images/timetable.jpg" target="_blank">Timetable</a></li>
                             </ul>
                         </li>
                         <li><a href="javascript:void(0)" onclick="openTeacherAuthModal()">Teacher Portal</a></li>
@@ -920,26 +930,13 @@
 
             <div class="slider-wrapper">
                 <div class="slider-track" id="sliderTrack">
-                    <!-- 🖼️ IMAGE SPOT 2: HERO SLIDER IMAGE 1 -->
-                    <div class="slide"><img src="slide_02.jpg" alt="Siphesihle High School Slide 1"></div>
-
-                    <!-- 🖼️ IMAGE SPOT 3: HERO SLIDER IMAGE 2 -->
-                    <div class="slide"><img src="slide_03.jpg" alt="Siphesihle High School Slide 2"></div>
-
-                    <!-- 🖼️ IMAGE SPOT 4: HERO SLIDER IMAGE 3 -->
-                    <div class="slide"><img src="slide_04.jpg" alt="Siphesihle High School Slide 3"></div>
-
-                    <!-- 🖼️ IMAGE SPOT 5: HERO SLIDER IMAGE 4 -->
-                    <div class="slide"><img src="slide_05.jpg" alt="Siphesihle High School Slide 4"></div>
-
-                    <!-- 🖼️ IMAGE SPOT 6: HERO SLIDER IMAGE 5 -->
-                    <div class="slide"><img src="slide_06.jpg" alt="Siphesihle High School Slide 5"></div>
-
-                    <!-- 🖼️ IMAGE SPOT 7: HERO SLIDER IMAGE 6 -->
-                    <div class="slide"><img src="slide_07.jpg" alt="Siphesihle High School Slide 7"></div>
-
-                    <!-- 🖼️ IMAGE SPOT 8: HERO SLIDER IMAGE 7 -->
-                    <div class="slide"><img src="slide_02.jpg" alt="Siphesihle High School Slide 7"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_02.jpg" alt="Siphesihle High School Slide 1"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_03.jpg" alt="Siphesihle High School Slide 2"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_04.jpg" alt="Siphesihle High School Slide 3"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_05.jpg" alt="Siphesihle High School Slide 4"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_06.jpg" alt="Siphesihle High School Slide 5"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_07.jpg" alt="Siphesihle High School Slide 6"></div>
+                    <div class="slide"><img src="frontend/assets/images/slide_02.jpg" alt="Siphesihle High School Slide 7"></div>
                 </div>
             </div>
         </div>
@@ -954,20 +951,17 @@
             </div>
             <div class="cards">
                 <div class="card" id="history">
-                    <!-- 🖼️ IMAGE SPOT 9: ABOUT SECTION - OUR SCHOOL CARD -->
-                    <img src="about.jpg" alt="Siphesihle High Building" class="card-img">
+                    <img src="frontend/assets/images/about.jpg" alt="Siphesihle High Building" class="card-img">
                     <h3>History of the School</h3>
                     <p>Siphesihle High School (registered as Siphesihle Secondary School) is a public Quintile 3 No-Fee secondary school serving Ward 4 of the Hammarsdale Circuit in Inchanga.</p>
                 </div>
                 <div class="card" id="staff">
-                    <!-- 🖼️ IMAGE SPOT 10: ABOUT SECTION - LEADERSHIP CARD -->
-                    <img src="leadership.jpg" alt="School Leadership and Staff" class="card-img">
+                    <img src="frontend/assets/images/leadership.jpg" alt="School Leadership and Staff" class="card-img">
                     <h3>Staff</h3>
                     <p>Led by Principal Mr. D. S. Dube alongside a dedicated staff of over 30 educators maintaining an effective student-to-teacher ratio for continuous growth.</p>
                 </div>
                 <div class="card" id="sgb">
-                    <!-- 🖼️ IMAGE SPOT 11: ABOUT SECTION - CORE VALUES CARD -->
-                    <img src="about.jpg" alt="Learners and School Culture" class="card-img">
+                    <img src="frontend/assets/images/about.jpg" alt="Learners and School Culture" class="card-img">
                     <h3>School Governing Board</h3>
                     <p>Our active School Governing Body (SGB) works in close partnership with school management, parents, and community leaders to steer growth, governance, and learner welfare.</p>
                 </div>
@@ -984,20 +978,17 @@
             </div>
             <div class="cards">
                 <div class="card" id="caps-curriculum">
-                    <!-- 🖼️ IMAGE SPOT 12: ACADEMICS SECTION - CAPS CURRICULUM CARD -->
-                    <img src="academics.jpg" alt="CAPS Curriculum Classroom" class="card-img">
+                    <img src="frontend/assets/images/academics.jpg" alt="CAPS Curriculum Classroom" class="card-img">
                     <h3>CAPS Curriculum</h3>
                     <p>Comprehensive CAPS curriculum for Grades 8 through 12, preparing students for National Senior Certificate success.</p>
                 </div>
                 <div class="card" id="academic-support">
-                    <!-- 🖼️ IMAGE SPOT 13: ACADEMICS SECTION - ACADEMIC SUPPORT CARD -->
-                    <img src="tutoring.jpg" alt="Academic Tutoring Support" class="card-img">
+                    <img src="frontend/assets/images/tutoring.jpg" alt="Academic Tutoring Support" class="card-img">
                     <h3>Academic Support</h3>
                     <p>Structured after-school tutoring, exam revision workshops, and mentorship from experienced educators.</p>
                 </div>
                 <div class="card" id="online-learning">
-                    <!-- 🖼️ IMAGE SPOT 14: ACADEMICS SECTION - DIGITAL ASSESSMENTS CARD -->
-                    <img src="computers.jpg" alt="Digital Assessments Lab" class="card-img">
+                    <img src="frontend/assets/images/computers.jpg" alt="Digital Assessments Lab" class="card-img">
                     <h3>Online Learning</h3>
                     <p>Integrated daily testing modules and interactive digital learning resources allowing learners to track understanding and continuous progress online.</p>
                 </div>
@@ -1016,9 +1007,7 @@
                 <div>
                     <h3>Enrollment for the Academic Year</h3>
                     <p style="margin-top: 10px; color: var(--text-muted);">Applications are open for Grades 8 to 12. Ensure all required documentation (Learner Birth Certificate, Latest School Report, Guardian ID) is ready before submission.</p>
-                    
-                    <!-- 🖼️ IMAGE SPOT 15: ADMISSIONS SECTION - BANNER/LOGO IMAGE -->
-                    <img src="logo.jpg" alt="Admissions and Enrollment" class="admission-img">
+                    <img src="frontend/assets/images/logo.jpg" alt="Admissions and Enrollment" class="admission-img">
                 </div>
                 <div class="application-box">
                     <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Online Application</h4>
@@ -1043,8 +1032,7 @@
             
             <div class="assessment-grid">
                 <div>
-                    <!-- 🖼️ IMAGE SPOT 16: ASSESSMENT SECTION - PORTAL PREVIEW IMAGE -->
-                    <img src="academics.jpg" alt="Learner Assessment Portal" class="assessment-img">
+                    <img src="frontend/assets/images/academics.jpg" alt="Learner Assessment Portal" class="assessment-img">
                     <p style="color: #cbd5e1; font-size: 1.05rem;">Teachers publish tailored test assessments daily. Learners sign in to access assigned tests, view academic results, and view class timetables.</p>
                     <div class="buttons" style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
                         <button class="btn primary" onclick="openAuthModal()" style="background: var(--accent); color: var(--text-dark);"><i class="fa-solid fa-right-to-bracket"></i> Student Portal</button>
@@ -1065,7 +1053,7 @@
         <div class="exam-container" style="max-width: 750px;">
             <div class="exam-header">
                 <div>
-                    <h3 style="font-size: 1.3rem;">Siphesihle High Online Application</h3>
+                    <h3 style="font-size: 1.3rem;"><img src="frontend/assets/images/logo.jpg" alt="" class="portal-logo">Siphesihle High Online Application</h3>
                     <p style="font-size: 0.85rem; opacity: 0.9;">Learner Admission Registration Form</p>
                 </div>
                 <button onclick="closeApplicationModal()" style="background: none; border: none; color: white; font-size: 1.3rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
@@ -1166,7 +1154,7 @@
         <div class="auth-container">
             <div class="exam-header">
                 <div>
-                    <h3 style="font-size: 1.2rem;">Teacher Portal Access</h3>
+                    <h3 style="font-size: 1.2rem;"><img src="frontend/assets/images/logo.jpg" alt="" class="portal-logo">Teacher Portal Access</h3>
                     <p style="font-size: 0.8rem; opacity: 0.9;">Staff Credential Verification</p>
                 </div>
                 <button onclick="closeTeacherAuthModal()" style="background: none; border: none; color: white; font-size: 1.3rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
@@ -1174,6 +1162,7 @@
             <div style="padding: 28px;">
                 <label style="display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--primary);">Enter Your Teacher ID:</label>
                 <input type="text" id="teacherIDInput" placeholder="e.g. T2347233" maxlength="8" style="margin-bottom: 4px;">
+                <input type="password" id="teacherPasswordInput" placeholder="Password" autocomplete="current-password">
                 <p id="teacherAuthError" class="error-message"><i class="fa-solid fa-triangle-exclamation"></i> Invalid Teacher ID! Enter 'T' followed by 7 numbers (e.g. T2347233 or T1234567).</p>
                 <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 20px 0;">Teacher ID must be 'T' followed by exactly 7 numeric digits without spaces.</p>
                 <button onclick="verifyTeacherAndProceed()" class="btn primary" style="width: 100%; justify-content: center; padding: 12px;"><i class="fa-solid fa-right-to-bracket"></i> Login to Teacher Portal</button>
@@ -1195,9 +1184,9 @@
             <div style="padding: 24px;">
                 <!-- PORTAL TABS -->
                 <div class="portal-tabs">
-                    <button class="portal-tab-btn active" onclick="switchTeacherTab('teachersRecords')"><i class="fa-solid fa-address-book"></i> Teachers Records</button>
-                    <button class="portal-tab-btn" onclick="switchTeacherTab('applicantsRecords')"><i class="fa-solid fa-file-signature"></i> Online Applicants Records</button>
-                    <button class="portal-tab-btn" onclick="switchTeacherTab('assessmentRecords')"><i class="fa-solid fa-square-poll-vertical"></i> Assessment Results</button>
+                    <button class="portal-tab-btn active" onclick="switchTeacherTab('teachersRecords', event)"><i class="fa-solid fa-address-book"></i> Teachers Records</button>
+                    <button class="portal-tab-btn" onclick="switchTeacherTab('applicantsRecords', event)"><i class="fa-solid fa-file-signature"></i> Online Applicants Records</button>
+                    <button class="portal-tab-btn" onclick="switchTeacherTab('assessmentRecords', event)"><i class="fa-solid fa-square-poll-vertical"></i> Assessment Results</button>
                 </div>
 
                 <!-- TAB 1: TEACHER RECORDS -->
@@ -1310,7 +1299,7 @@
         <div class="auth-container">
             <div class="exam-header">
                 <div>
-                    <h3 style="font-size: 1.2rem;">Student Identification</h3>
+                    <h3 style="font-size: 1.2rem;"><img src="frontend/assets/images/logo.jpg" alt="" class="portal-logo">Student Identification</h3>
                     <p style="font-size: 0.8rem; opacity: 0.9;">Assessment Portal Access</p>
                 </div>
                 <button onclick="closeAuthModal()" style="background: none; border: none; color: white; font-size: 1.3rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
@@ -1318,6 +1307,7 @@
             <div style="padding: 28px;">
                 <label style="display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--primary);">Enter Your 8-Digit Student Number:</label>
                 <input type="text" id="studentNumberInput" placeholder="e.g. 26123456" maxlength="8" style="margin-bottom: 4px;">
+                <input type="password" id="studentPasswordInput" placeholder="Password" autocomplete="current-password">
                 <p id="authError" class="error-message"><i class="fa-solid fa-triangle-exclamation"></i> Invalid Student Number! Please re-enter an 8-digit number starting with 26.</p>
                 <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 20px 0;">Note: Only student numbers starting with <strong>26</strong> are recognized for academic evaluation.</p>
                 <button onclick="verifyAndProceed()" class="btn primary" style="width: 100%; justify-content: center; padding: 12px;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Proceed to Assessment</button>
@@ -1330,7 +1320,7 @@
         <div class="auth-container">
             <div class="exam-header">
                 <div>
-                    <h3 style="font-size: 1.2rem;">Academic Results Portal</h3>
+                    <h3 style="font-size: 1.2rem;"><img src="frontend/assets/images/logo.jpg" alt="" class="portal-logo">Academic Results Portal</h3>
                     <p style="font-size: 0.8rem; opacity: 0.9;">Continuous Assessment Records</p>
                 </div>
                 <button onclick="closeResultsModal()" style="background: none; border: none; color: white; font-size: 1.3rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
@@ -1338,6 +1328,7 @@
             <div style="padding: 28px;">
                 <label style="display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--primary);">Enter Your 8-Digit Student Number:</label>
                 <input type="text" id="resultsStudentNumberInput" placeholder="e.g. 26123456" maxlength="8" style="margin-bottom: 4px;">
+                <input type="password" id="resultsPasswordInput" placeholder="Password" autocomplete="current-password">
                 <p id="resultsAuthError" class="error-message"><i class="fa-solid fa-triangle-exclamation"></i> Invalid Student Number! Please re-enter your 8-digit student number starting with 26.</p>
                 <button onclick="verifyAndFetchResults()" class="btn primary" style="width: 100%; justify-content: center; padding: 12px; margin-top: 16px;"><i class="fa-solid fa-magnifying-glass"></i> Access Student Records</button>
             </div>
@@ -1349,7 +1340,7 @@
         <div class="auth-container" style="max-width: 600px;">
             <div class="exam-header">
                 <div>
-                    <h3 style="font-size: 1.3rem;">Student Academic Transcript</h3>
+                    <h3 style="font-size: 1.3rem;"><img src="frontend/assets/images/logo.jpg" alt="" class="portal-logo">Student Academic Transcript</h3>
                     <p style="font-size: 0.85rem; opacity: 0.9;">Siphesihle High School Official Records</p>
                 </div>
                 <button onclick="closeResultsDisplayModal()" style="background: none; border: none; color: white; font-size: 1.3rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
@@ -1372,7 +1363,7 @@
         <div class="exam-container">
             <div class="exam-header">
                 <div>
-                    <h3 style="font-size: 1.4rem;">Online Assessment Portal</h3>
+                    <h3 style="font-size: 1.4rem;"><img src="frontend/assets/images/logo.jpg" alt="" class="portal-logo">Online Assessment Portal</h3>
                     <p style="font-size: 0.85rem; opacity: 0.9;">Siphesihle High School Academic Portal</p>
                 </div>
                 <button onclick="closeExamModal()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
@@ -1493,8 +1484,7 @@
             <div class="events-list">
                 <div class="event">
                     <div class="date-badge"><span class="day">15</span><span class="month">OCT</span></div>
-                    <!-- 🖼️ IMAGE SPOT 17: EVENTS - WORKSHOP EVENT IMAGE -->
-                    <img src="workshop.png" alt="Academic Workshop" class="event-img">
+                    <img src="frontend/assets/images/workshop.png" alt="Academic Workshop" class="event-img">
                     <div>
                         <strong>Academic Support & Workshop Day</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">Extra tutorial sessions for Grade 11 & 12 exam candidates.</p>
@@ -1502,8 +1492,7 @@
                 </div>
                 <div class="event">
                     <div class="date-badge"><span class="day">22</span><span class="month">OCT</span></div>
-                    <!-- 🖼️ IMAGE SPOT 18: EVENTS - SPORTS DAY EVENT IMAGE -->
-                    <img src="sport_02.jpg" alt="Sports Day" class="event-img">
+                    <img src="frontend/assets/images/sport_02.jpg" alt="Sports Day" class="event-img">
                     <div>
                         <strong>Annual Inter-House Sports & Culture Tournament</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">Athletics and sports competitions on the school grounds.</p>
@@ -1511,8 +1500,7 @@
                 </div>
                 <div class="event">
                     <div class="date-badge"><span class="day">30</span><span class="month">OCT</span></div>
-                    <!-- 🖼️ IMAGE SPOT 19: EVENTS - PTA MEETING EVENT IMAGE -->
-                    <img src="parents.jpg" alt="Parent Meeting" class="event-img">
+                    <img src="frontend/assets/images/parents.jpg" alt="Parent Meeting" class="event-img">
                     <div>
                         <strong>Parent-Teacher Association Meeting</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">Community review meeting with school management.</p>
@@ -1568,8 +1556,7 @@
         <div class="container">
             <div class="footer-content">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <!-- 🖼️ IMAGE SPOT 20: FOOTER LOGO IMAGE -->
-                    <img src="logo.jpg" alt="Logo" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;">
+                    <img src="frontend/assets/images/logo.jpg" alt="Logo" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;">
                     <div>
                         <h3 style="color: white; margin-bottom: 2px;">Siphesihle High School</h3>
                         <p style="color: #94a3b8; font-size: 0.85rem;">EMIS: 500267399 | Hammarsdale Circuit | Ward 4</p>
@@ -1583,6 +1570,7 @@
     </footer>
 
     <!-- SCRIPT FOR NAVIGATION, SLOW-MOTION SLIDER, AND PORTAL SYSTEMS -->
+    <script src="frontend/js/api.js"></script>
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
@@ -1614,6 +1602,7 @@
         function openAuthModal() {
             document.getElementById('authError').style.display = 'none';
             document.getElementById('studentNumberInput').value = '';
+            document.getElementById('studentPasswordInput').value = '';
             document.getElementById('authModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -1623,12 +1612,20 @@
             document.body.style.overflow = 'auto';
         }
 
-        function verifyAndProceed() {
+        async function verifyAndProceed() {
             const num = document.getElementById('studentNumberInput').value.trim();
-            if (validateStudentNumber(num)) {
-                activeStudentNumber = num;
-                closeAuthModal();
-                openExamModal();
+            const password = document.getElementById('studentPasswordInput').value;
+            if (validateStudentNumber(num) && password.length >= 8) {
+                try {
+                    const result = await schoolApi.login({ school_slug: 'siphesihle-high-school', identifier: num, password });
+                    sessionStorage.setItem('school_access_token', result.access_token);
+                    activeStudentNumber = result.user.student_number;
+                    closeAuthModal();
+                    openExamModal();
+                } catch (error) {
+                    document.getElementById('authError').textContent = 'Invalid student number or password.';
+                    document.getElementById('authError').style.display = 'block';
+                }
             } else {
                 document.getElementById('authError').style.display = 'block';
             }
@@ -1637,6 +1634,7 @@
         function openResultsModal() {
             document.getElementById('resultsAuthError').style.display = 'none';
             document.getElementById('resultsStudentNumberInput').value = '';
+            document.getElementById('resultsPasswordInput').value = '';
             document.getElementById('resultsLookupModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -1646,22 +1644,31 @@
             document.body.style.overflow = 'auto';
         }
 
-        function verifyAndFetchResults() {
+        async function verifyAndFetchResults() {
             const num = document.getElementById('resultsStudentNumberInput').value.trim();
-            if (validateStudentNumber(num)) {
-                closeResultsModal();
-                showStudentResults(num);
+            const password = document.getElementById('resultsPasswordInput').value;
+            if (validateStudentNumber(num) && password.length >= 8) {
+                try {
+                    const result = await schoolApi.login({ school_slug: 'siphesihle-high-school', identifier: num, password });
+                    sessionStorage.setItem('school_access_token', result.access_token);
+                    closeResultsModal();
+                    showStudentResults(num);
+                } catch (error) {
+                    document.getElementById('resultsAuthError').textContent = 'Invalid student number or password.';
+                    document.getElementById('resultsAuthError').style.display = 'block';
+                }
             } else {
                 document.getElementById('resultsAuthError').style.display = 'block';
             }
         }
 
-        function showStudentResults(studentNum) {
+        async function showStudentResults(studentNum) {
             document.getElementById('recordStudentNumberDisplay').textContent = studentNum;
-            const records = JSON.parse(localStorage.getItem('student_results_' + studentNum) || '[]');
             const area = document.getElementById('recordContentArea');
-
-            if (records.length === 0) {
+            try {
+                const response = await schoolApi.listAssessmentResults();
+                const records = response.assessments || [];
+                if (records.length === 0) {
                 area.innerHTML = `
                     <div style="text-align: center; padding: 20px 0;">
                         <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; color: var(--text-muted); margin-bottom: 12px;"></i>
@@ -1669,9 +1676,9 @@
                         <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Complete an online assessment to record your scores in this tab.</p>
                     </div>
                 `;
-            } else {
+                } else {
                 let html = '<div style="display: flex; flex-direction: column; gap: 12px;">';
-                records.forEach((rec, idx) => {
+                records.forEach((rec) => {
                     html += `
                         <div style="border: 1px solid var(--border); padding: 16px; border-radius: 8px; background: white; display: flex; justify-content: space-between; align-items: center;">
                             <div>
@@ -1687,6 +1694,9 @@
                 });
                 html += '</div>';
                 area.innerHTML = html;
+                }
+            } catch (error) {
+                area.innerHTML = '<p style="color: #dc2626;">Results are temporarily unavailable. Please try again.</p>';
             }
 
             document.getElementById('resultsDisplayModal').style.display = 'block';
@@ -1754,7 +1764,7 @@
             }, 1000);
         }
 
-        function submitExam(e) {
+        async function submitExam(e) {
             e.preventDefault();
             if (timerInterval) clearInterval(timerInterval);
 
@@ -1768,24 +1778,17 @@
                 }
             }
 
-            // Save result to LocalStorage key corresponding to the student and main list
-            if (activeStudentNumber) {
-                const existingRecords = JSON.parse(localStorage.getItem('student_results_' + activeStudentNumber) || '[]');
-                const newRecord = {
-                    studentNumber: activeStudentNumber,
-                    subject: 'Economics 101 (Grade 11)',
-                    score: score,
-                    total: 10,
-                    status: score >= 5 ? 'PASSED' : 'NEEDS REVISION',
-                    date: new Date().toLocaleString()
-                };
-                existingRecords.unshift(newRecord);
-                localStorage.setItem('student_results_' + activeStudentNumber, JSON.stringify(existingRecords));
-
-                // Also append to global teacher-accessible assessments array
-                const allAssessments = JSON.parse(localStorage.getItem('all_student_assessments') || '[]');
-                allAssessments.unshift(newRecord);
-                localStorage.setItem('all_student_assessments', JSON.stringify(allAssessments));
+            try {
+                const answers = Object.fromEntries(formData.entries());
+                const savedResult = await schoolApi.submitAssessment({
+                    school_slug: 'siphesihle-high-school',
+                    subject: 'Economics 101',
+                    answers
+                });
+                score = savedResult.score;
+            } catch (error) {
+                alert('The assessment could not be saved. Please check your connection and try again.');
+                return;
             }
 
             form.style.display = 'none';
@@ -1819,62 +1822,30 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Helper function to read file as Base64 for storing in applicant records
-        function readFileAsBase64(file) {
-            return new Promise((resolve, reject) => {
-                if (!file) {
-                    resolve(null);
-                    return;
-                }
-                const reader = new FileReader();
-                reader.onload = () => resolve({ name: file.name, type: file.type, data: reader.result });
-                reader.onerror = error => reject(error);
-                reader.readAsDataURL(file);
-            });
-        }
-
         async function submitOnlineApplication(e) {
             e.preventDefault();
-
-            const learnerIDFile = document.getElementById('appDocLearnerID').files[0];
-            const parentIDFile = document.getElementById('appDocParentID').files[0];
-            const reportFile = document.getElementById('appDocReport').files[0];
-
             try {
-                const learnerIDDoc = await readFileAsBase64(learnerIDFile);
-                const parentIDDoc = await readFileAsBase64(parentIDFile);
-                const reportDoc = await readFileAsBase64(reportFile);
-
-                const applicationData = {
-                    id: 'APP-' + Math.floor(100000 + Math.random() * 900000),
-                    firstName: document.getElementById('appFirstName').value.trim(),
-                    surname: document.getElementById('appSurname').value.trim(),
-                    idNumber: document.getElementById('appIDNumber').value.trim(),
-                    applyingGrade: document.getElementById('appApplyingGrade').value,
-                    currentSchool: document.getElementById('appCurrentSchool').value.trim(),
-                    lastGradePassed: document.getElementById('appLastGradePassed').value.trim(),
-                    prevSchoolDetails: document.getElementById('appPrevSchoolDetails').value.trim() || 'N/A',
-                    parentName: document.getElementById('appParentName').value.trim(),
-                    parentContact: document.getElementById('appParentContact').value.trim(),
-                    parentEmail: document.getElementById('appParentEmail').value.trim() || 'N/A',
-                    status: 'PENDING',
-                    documents: {
-                        learnerID: learnerIDDoc,
-                        parentID: parentIDDoc,
-                        reportCard: reportDoc
-                    },
-                    dateSubmitted: new Date().toLocaleString()
-                };
-
-                // Save to localStorage under applicant records
-                const existingApps = JSON.parse(localStorage.getItem('siphesihle_online_applicants') || '[]');
-                existingApps.unshift(applicationData);
-                localStorage.setItem('siphesihle_online_applicants', JSON.stringify(existingApps));
-
+                const form = document.getElementById('onlineAppForm');
+                const formData = new FormData(form);
+                formData.append('school_slug', 'siphesihle-high-school');
+                formData.append('first_name', document.getElementById('appFirstName').value.trim());
+                formData.append('surname', document.getElementById('appSurname').value.trim());
+                formData.append('id_number', document.getElementById('appIDNumber').value.trim());
+                formData.append('applying_grade', document.getElementById('appApplyingGrade').value);
+                formData.append('current_school', document.getElementById('appCurrentSchool').value.trim());
+                formData.append('last_grade_passed', document.getElementById('appLastGradePassed').value.trim());
+                formData.append('prev_school_details', document.getElementById('appPrevSchoolDetails').value.trim());
+                formData.append('parent_name', document.getElementById('appParentName').value.trim());
+                formData.append('parent_contact', document.getElementById('appParentContact').value.trim());
+                formData.append('parent_email', document.getElementById('appParentEmail').value.trim());
+                formData.append('learner_id_document', document.getElementById('appDocLearnerID').files[0]);
+                formData.append('parent_id_document', document.getElementById('appDocParentID').files[0]);
+                formData.append('report_card_document', document.getElementById('appDocReport').files[0]);
+                const application = await schoolApi.submitApplication(formData);
                 closeApplicationModal();
-                alert(`Application Submitted Successfully!\nReference ID: ${applicationData.id}\nYour application and supporting documents have been registered for teacher review.`);
+                alert(`Application Submitted Successfully!\nReference ID: ${application.reference_code}\nYour application and supporting documents have been registered for teacher review.`);
             } catch (error) {
-                alert('Error processing document uploads. Please try uploading smaller files.');
+                alert('The application could not be saved. Check that each document is a PDF, JPG, or PNG under 5 MB.');
             }
         }
 
@@ -1905,7 +1876,7 @@
                 </head>
                 <body>
                     <div class="header-bar">
-                        <img src="logo.jpg" alt="Siphesihle High Logo" class="header-logo">
+                        <img src="${window.location.origin}/frontend/assets/images/logo.jpg" alt="Siphesihle High Logo" class="header-logo">
                         <div>
                             <h1>SIPHESIHLE HIGH SCHOOL</h1>
                             <p class="sub">Ukukhanya Makwande | Official Admission Form (Offline / Manual Submission)</p>
@@ -1970,6 +1941,8 @@
 
         /* TEACHER PORTAL AUTHENTICATION & DASHBOARD LOGIC */
         let activeTeacherID = null;
+        let teacherApplications = [];
+        let teacherAssessments = [];
 
         function validateTeacherID(id) {
             return /^T\d{7}$/.test(id);
@@ -1978,6 +1951,7 @@
         function openTeacherAuthModal() {
             document.getElementById('teacherAuthError').style.display = 'none';
             document.getElementById('teacherIDInput').value = '';
+            document.getElementById('teacherPasswordInput').value = '';
             document.getElementById('teacherAuthModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -1987,12 +1961,20 @@
             document.body.style.overflow = 'auto';
         }
 
-        function verifyTeacherAndProceed() {
+        async function verifyTeacherAndProceed() {
             const inputID = document.getElementById('teacherIDInput').value.trim();
-            if (validateTeacherID(inputID)) {
-                activeTeacherID = inputID;
-                closeTeacherAuthModal();
-                openTeacherDashboard();
+            const password = document.getElementById('teacherPasswordInput').value;
+            if (validateTeacherID(inputID) && password.length >= 8) {
+                try {
+                    const result = await schoolApi.login({ school_slug: 'siphesihle-high-school', identifier: inputID, password });
+                    sessionStorage.setItem('school_access_token', result.access_token);
+                    activeTeacherID = result.user.employee_id;
+                    closeTeacherAuthModal();
+                    openTeacherDashboard();
+                } catch (error) {
+                    document.getElementById('teacherAuthError').textContent = 'Invalid teacher ID or password.';
+                    document.getElementById('teacherAuthError').style.display = 'block';
+                }
             } else {
                 document.getElementById('teacherAuthError').style.display = 'block';
             }
@@ -2011,14 +1993,16 @@
             document.body.style.overflow = 'auto';
         }
 
-        function switchTeacherTab(tabId) {
+        function switchTeacherTab(tabId, evt) {
             const tabs = document.querySelectorAll('.portal-tab-btn');
             const contents = document.querySelectorAll('.portal-tab-content');
 
             tabs.forEach(tab => tab.classList.remove('active'));
             contents.forEach(content => content.classList.remove('active'));
 
-            event.currentTarget.classList.add('active');
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            }
             document.getElementById(tabId).classList.add('active');
         }
 
@@ -2085,7 +2069,25 @@
         }
 
         /* APPLICANTS RECORDS REVIEW FUNCTIONALITY FOR TEACHERS */
-        function loadApplicantRecordsForTeachers() {
+        async function loadApplicantRecordsForTeachers() {
+            const container = document.getElementById('applicantsTableContainer');
+            try {
+                const response = await schoolApi.listApplications();
+                teacherApplications = response.applications || [];
+                if (teacherApplications.length === 0) {
+                    container.innerHTML = '<p style="color: var(--text-muted);">No applications are currently stored for this school.</p>';
+                    return;
+                }
+                container.innerHTML = `<table class="data-table"><thead><tr><th>Reference</th><th>Learner</th><th>Grade</th><th>Guardian</th><th>Status</th><th>Action</th></tr></thead><tbody>${teacherApplications.map((app, index) => `
+                    <tr><td><strong>${app.reference_code}</strong></td><td>${app.learner_name}</td><td>${app.grade}</td><td>${app.guardian_name}<br><small>${app.guardian_phone}</small></td>
+                    <td><span class="status-badge status-${app.status.toLowerCase()}">${app.status}</span></td><td><button class="btn-action-sm btn-action-view" onclick="inspectApplicantDetail(${index})"><i class="fa-solid fa-magnifying-glass"></i> Review</button></td></tr>`).join('')}</tbody></table>`;
+            } catch (error) {
+                container.innerHTML = '<p style="color: #dc2626;">Applications could not be loaded from PostgreSQL.</p>';
+            }
+            return;
+        }
+        /* Legacy localStorage rendering retained below only as migration reference. */
+        function loadApplicantRecordsForTeachersLegacy() {
             const container = document.getElementById('applicantsTableContainer');
             const applicants = JSON.parse(localStorage.getItem('siphesihle_online_applicants') || '[]');
 
@@ -2129,7 +2131,7 @@
                             docsHTML += `<button class="btn-action-sm btn-action-view" onclick='previewDocument("${app.documents.reportCard.data}", "${app.documents.reportCard.name}", "Report Card")'><i class="fa-solid fa-eye"></i> Report Card</button>`;
                         }
                     } else {
-                        docsHTML += '<span style="color: var(--text-muted);">No documents</span>';
+                        docsHTML += '<span style="color: var(--text-muted);">No Documents</span>';
                     }
                     docsHTML += '</div>';
 
@@ -2138,12 +2140,12 @@
                             <td><strong>${app.id}</strong></td>
                             <td>${app.firstName} ${app.surname}</td>
                             <td>${app.idNumber}</td>
-                            <td><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">${app.applyingGrade}</span></td>
-                            <td>${app.parentName}<br><span style="color: var(--text-muted); font-size: 0.8rem;">${app.parentContact}</span></td>
+                            <td>${app.applyingGrade}</td>
+                            <td>${app.parentName}<br><span style="font-size: 0.8rem; color: var(--text-muted);">${app.parentContact}</span></td>
                             <td><span class="status-badge ${statusClass}">${statusText}</span></td>
                             <td>${docsHTML}</td>
                             <td>
-                                <button class="btn-action-sm btn-action-view" onclick="reviewApplicantDetails('${app.id}')"><i class="fa-solid fa-clipboard-check"></i> Review Details</button>
+                                <button class="btn-action-sm btn-action-view" onclick="inspectApplicantDetail(${index})"><i class="fa-solid fa-magnifying-glass"></i> Review</button>
                             </td>
                         </tr>
                     `;
@@ -2153,117 +2155,123 @@
             }
         }
 
-        function reviewApplicantDetails(appId) {
+        async function inspectApplicantDetail(index) {
+            const app = teacherApplications[index];
+            if (!app) return;
+            const panel = document.getElementById('applicantDetailReviewPanel');
+            panel.style.display = 'block';
+            panel.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:12px; margin-bottom:16px;"><h4 style="color:var(--primary);"><i class="fa-solid fa-user-check"></i> Applicant Review: ${app.learner_name} (${app.reference_code})</h4><button onclick="document.getElementById('applicantDetailReviewPanel').style.display='none'" class="btn-action-sm btn-action-reject">Close</button></div><div class="review-grid"><div><div class="review-field-label">Learner</div><div class="review-field-val">${app.learner_name}</div></div><div><div class="review-field-label">ID / Birth Certificate</div><div class="review-field-val">${app.learner_id_number}</div></div><div><div class="review-field-label">Grade</div><div class="review-field-val">${app.grade}</div></div><div><div class="review-field-label">Previous School</div><div class="review-field-val">${app.current_school} (${app.last_grade_passed})</div></div><div><div class="review-field-label">Guardian</div><div class="review-field-val">${app.guardian_name}</div></div><div><div class="review-field-label">Guardian Contact</div><div class="review-field-val">${app.guardian_phone}</div></div></div><div style="display:flex; gap:12px; flex-wrap:wrap;"><button class="btn-action-sm btn-action-approve" onclick="updateApplicantStatus(${index}, 'APPROVED')">Approve</button><button class="btn-action-sm btn-action-reject" onclick="updateApplicantStatus(${index}, 'REJECTED')">Reject</button><button class="btn-action-sm btn-action-view" onclick="updateApplicantStatus(${index}, 'PENDING')">Pending</button></div>`;
+            return;
+        }
+        /* Legacy localStorage review retained below only as migration reference. */
+        async function inspectApplicantDetailLegacy(index) {
             const applicants = JSON.parse(localStorage.getItem('siphesihle_online_applicants') || '[]');
-            const app = applicants.find(a => a.id === appId);
+            const app = applicants[index];
             if (!app) return;
 
             const panel = document.getElementById('applicantDetailReviewPanel');
             panel.style.display = 'block';
 
-            let docsButtonsHTML = '';
-            if (app.documents) {
-                if (app.documents.learnerID) {
-                    docsButtonsHTML += `<button class="btn-action-sm btn-action-view" onclick='previewDocument("${app.documents.learnerID.data}", "${app.documents.learnerID.name}", "Learner ID")'><i class="fa-solid fa-id-card"></i> View Learner ID</button> `;
-                }
-                if (app.documents.parentID) {
-                    docsButtonsHTML += `<button class="btn-action-sm btn-action-view" onclick='previewDocument("${app.documents.parentID.data}", "${app.documents.parentID.name}", "Parent ID")'><i class="fa-solid fa-user-shield"></i> View Parent ID</button> `;
-                }
-                if (app.documents.reportCard) {
-                    docsButtonsHTML += `<button class="btn-action-sm btn-action-view" onclick='previewDocument("${app.documents.reportCard.data}", "${app.documents.reportCard.name}", "Report Card")'><i class="fa-solid fa-file-lines"></i> View Report Card</button> `;
-                }
-            }
-
             panel.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
-                    <div>
-                        <h4 style="color: var(--primary); font-size: 1.1rem;"><i class="fa-solid fa-user-graduate"></i> Comprehensive Applicant Review: ${app.firstName} ${app.surname}</h4>
-                        <span style="font-size: 0.85rem; color: var(--text-muted);">Application Reference: <strong>${app.id}</strong> | Submitted: ${app.dateSubmitted}</span>
-                    </div>
-                    <button onclick="document.getElementById('applicantDetailReviewPanel').style.display='none'" style="background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
+                    <h4 style="color: var(--primary);"><i class="fa-solid fa-user-check"></i> Applicant Full Review & Management: ${app.firstName} ${app.surname} (${app.id})</h4>
+                    <button onclick="document.getElementById('applicantDetailReviewPanel').style.display='none'" class="btn-action-sm btn-action-reject"><i class="fa-solid fa-xmark"></i> Close Panel</button>
                 </div>
-
                 <div class="review-grid">
                     <div>
-                        <div class="review-field-label">Full Name</div>
+                        <div class="review-field-label">Full Learner Name</div>
                         <div class="review-field-val">${app.firstName} ${app.surname}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">SA ID / Birth Cert No.</div>
+                        <div class="review-field-label">ID / Birth Certificate</div>
                         <div class="review-field-val">${app.idNumber}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">Grade Applying For</div>
+                        <div class="review-field-label">Target Grade</div>
                         <div class="review-field-val">${app.applyingGrade}</div>
                     </div>
                     <div>
                         <div class="review-field-label">Current / Previous School</div>
-                        <div class="review-field-val">${app.currentSchool}</div>
-                    </div>
-                    <div>
-                        <div class="review-field-label">Highest Grade Passed</div>
-                        <div class="review-field-val">${app.lastGradePassed}</div>
-                    </div>
-                    <div>
-                        <div class="review-field-label">Previous School Contact</div>
-                        <div class="review-field-val">${app.prevSchoolDetails}</div>
+                        <div class="review-field-val">${app.currentSchool} (${app.lastGradePassed})</div>
                     </div>
                     <div>
                         <div class="review-field-label">Parent / Guardian Name</div>
                         <div class="review-field-val">${app.parentName}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">Parent Contact Number</div>
+                        <div class="review-field-label">Parent Contact Phone</div>
                         <div class="review-field-val">${app.parentContact}</div>
                     </div>
                     <div>
                         <div class="review-field-label">Parent Email</div>
                         <div class="review-field-val">${app.parentEmail}</div>
                     </div>
-                </div>
-
-                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-                    <div class="review-field-label" style="margin-bottom: 8px;">Review Uploaded Documentation</div>
-                    <div>${docsButtonsHTML || '<p style="font-size: 0.85rem; color: var(--text-muted);">No documents available for review.</p>'}</div>
-                </div>
-
-                <div style="margin-top: 20px; display: flex; align-items: center; justify-content: space-between; background: white; padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
                     <div>
-                        <strong style="font-size: 0.9rem; color: var(--primary);">Update Admission Status:</strong>
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Set application decision after reviewing details and verified documents.</p>
+                        <div class="review-field-label">Application Date</div>
+                        <div class="review-field-val">${app.dateSubmitted}</div>
                     </div>
-                    <div style="display: flex; gap: 8px;">
-                        <button class="btn-action-sm btn-action-approve" onclick="updateApplicantStatus('${app.id}', 'APPROVED')"><i class="fa-solid fa-check"></i> Approve Application</button>
-                        <button class="btn-action-sm btn-action-reject" onclick="updateApplicantStatus('${app.id}', 'REJECTED')"><i class="fa-solid fa-xmark"></i> Reject Application</button>
-                        <button class="btn-action-sm btn-action-view" onclick="updateApplicantStatus('${app.id}', 'PENDING')"><i class="fa-solid fa-clock"></i> Mark Pending</button>
+                </div>
+
+                <div style="margin-top: 16px; border-top: 1px solid var(--border); padding-top: 16px;">
+                    <div class="review-field-label" style="margin-bottom: 8px;">Update Admission Status</div>
+                    <div style="display: flex; gap: 12px;">
+                        <button class="btn-action-sm btn-action-approve" onclick="updateApplicantStatus(${index}, 'APPROVED')" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-circle-check"></i> Approve Application</button>
+                        <button class="btn-action-sm btn-action-reject" onclick="updateApplicantStatus(${index}, 'REJECTED')" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-circle-xmark"></i> Reject Application</button>
+                        <button class="btn-action-sm btn-action-view" onclick="updateApplicantStatus(${index}, 'PENDING')" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-clock"></i> Set as Pending</button>
                     </div>
                 </div>
             `;
-            panel.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function updateApplicantStatus(appId, newStatus) {
-            let applicants = JSON.parse(localStorage.getItem('siphesihle_online_applicants') || '[]');
-            const index = applicants.findIndex(a => a.id === appId);
-            if (index !== -1) {
+        async function updateApplicantStatus(index, newStatus) {
+            const app = teacherApplications[index];
+            if (!app) return;
+            try {
+                await schoolApi.updateApplicationStatus(app.id, newStatus);
+                await loadApplicantRecordsForTeachers();
+                inspectApplicantDetail(index);
+                alert(`Applicant status updated to: ${newStatus}`);
+            } catch (error) {
+                alert('The application status could not be updated.');
+            }
+            return;
+        }
+        function updateApplicantStatusLegacy(index, newStatus) {
+            const applicants = JSON.parse(localStorage.getItem('siphesihle_online_applicants') || '[]');
+            if (applicants[index]) {
                 applicants[index].status = newStatus;
                 localStorage.setItem('siphesihle_online_applicants', JSON.stringify(applicants));
-                alert(`Applicant ${appId} status updated to ${newStatus}`);
                 loadApplicantRecordsForTeachers();
-                reviewApplicantDetails(appId);
+                inspectApplicantDetail(index);
+                alert(`Applicant status updated to: ${newStatus}`);
             }
         }
 
         /* ASSESSMENT RECORDS REVIEW FUNCTIONALITY FOR TEACHERS */
-        function loadAssessmentRecordsForTeachers() {
+        async function loadAssessmentRecordsForTeachers() {
+            const container = document.getElementById('assessmentTableContainer');
+            try {
+                const response = await schoolApi.listAssessmentResults();
+                teacherAssessments = response.assessments || [];
+                if (teacherAssessments.length === 0) {
+                    container.innerHTML = '<p style="color: var(--text-muted);">No assessment submissions are currently stored for this school.</p>';
+                    return;
+                }
+                container.innerHTML = `<table class="data-table"><thead><tr><th>Student ID</th><th>Subject</th><th>Score</th><th>Status</th><th>Date</th></tr></thead><tbody>${teacherAssessments.map((ass) => `<tr><td><strong>${ass.student_number || 'Unknown'}</strong></td><td>${ass.subject}</td><td><strong>${ass.score} / ${ass.total}</strong></td><td><span class="status-badge ${ass.status === 'PASSED' ? 'status-approved' : 'status-rejected'}">${ass.status}</span></td><td>${ass.date}</td></tr>`).join('')}</tbody></table>`;
+            } catch (error) {
+                container.innerHTML = '<p style="color: #dc2626;">Assessment results could not be loaded from PostgreSQL.</p>';
+            }
+            return;
+        }
+        function loadAssessmentRecordsForTeachersLegacy() {
             const container = document.getElementById('assessmentTableContainer');
             const assessments = JSON.parse(localStorage.getItem('all_student_assessments') || '[]');
 
             if (assessments.length === 0) {
                 container.innerHTML = `
                     <div style="text-align: center; padding: 30px; background: var(--bg-light); border-radius: 8px;">
-                        <i class="fa-solid fa-clipboard-check" style="font-size: 2rem; color: var(--text-muted); margin-bottom: 8px;"></i>
-                        <p style="color: var(--text-muted);">No student assessment submissions recorded yet.</p>
+                        <i class="fa-solid fa-file-excel" style="font-size: 2rem; color: var(--text-muted); margin-bottom: 8px;"></i>
+                        <p style="color: var(--text-muted);">No student test submissions logged yet. Recorded assessment tests will appear here.</p>
                     </div>
                 `;
             } else {
@@ -2271,31 +2279,27 @@
                     <table class="data-table">
                         <thead>
                             <tr>
-                                <th>Student Number</th>
-                                <th>Subject & Grade</th>
-                                <th>Score / Total</th>
-                                <th>Percentage</th>
-                                <th>Academic Status</th>
-                                <th>Submission Date</th>
-                                <th>Review</th>
+                                <th>Student ID</th>
+                                <th>Subject</th>
+                                <th>Score</th>
+                                <th>Status</th>
+                                <th>Completion Date</th>
+                                <th>Action Review</th>
                             </tr>
                         </thead>
                         <tbody>
                 `;
-                assessments.forEach((rec, idx) => {
-                    const percentage = Math.round((rec.score / rec.total) * 100);
-                    const statusColor = rec.score >= 5 ? '#16a34a' : '#dc2626';
-
+                assessments.forEach((ass, index) => {
+                    const statusClass = ass.status === 'PASSED' ? 'status-approved' : 'status-rejected';
                     html += `
                         <tr>
-                            <td><strong>${rec.studentNumber}</strong></td>
-                            <td>${rec.subject}</td>
-                            <td><strong>${rec.score} / ${rec.total}</strong></td>
-                            <td><strong>${percentage}%</strong></td>
-                            <td style="font-weight: 700; color: ${statusColor};">${rec.status}</td>
-                            <td>${rec.date}</td>
+                            <td><strong>${ass.studentNumber}</strong></td>
+                            <td>${ass.subject}</td>
+                            <td><strong>${ass.score} / ${ass.total}</strong></td>
+                            <td><span class="status-badge ${statusClass}">${ass.status}</span></td>
+                            <td>${ass.date}</td>
                             <td>
-                                <button class="btn-action-sm btn-action-view" onclick="reviewAssessmentDetails(${idx})"><i class="fa-solid fa-magnifying-glass-chart"></i> Review Score</button>
+                                <button class="btn-action-sm btn-action-view" onclick="inspectAssessmentDetail(${index})"><i class="fa-solid fa-magnifying-glass"></i> Inspect</button>
                             </td>
                         </tr>
                     `;
@@ -2305,62 +2309,42 @@
             }
         }
 
-        function reviewAssessmentDetails(index) {
+        function inspectAssessmentDetail(index) {
             const assessments = JSON.parse(localStorage.getItem('all_student_assessments') || '[]');
-            const rec = assessments[index];
-            if (!rec) return;
+            const ass = assessments[index];
+            if (!ass) return;
 
             const panel = document.getElementById('assessmentDetailReviewPanel');
             panel.style.display = 'block';
 
-            const percentage = Math.round((rec.score / rec.total) * 100);
-            
             panel.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
-                    <div>
-                        <h4 style="color: var(--primary); font-size: 1.1rem;"><i class="fa-solid fa-chart-line"></i> Student Assessment Performance Evaluation</h4>
-                        <span style="font-size: 0.85rem; color: var(--text-muted);">Learner Student ID: <strong>${rec.studentNumber}</strong></span>
-                    </div>
-                    <button onclick="document.getElementById('assessmentDetailReviewPanel').style.display='none'" style="background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
+                    <h4 style="color: var(--primary);"><i class="fa-solid fa-chart-line"></i> Assessment Evaluation Review: Student ${ass.studentNumber}</h4>
+                    <button onclick="document.getElementById('assessmentDetailReviewPanel').style.display='none'" class="btn-action-sm btn-action-reject"><i class="fa-solid fa-xmark"></i> Close Panel</button>
                 </div>
-
                 <div class="review-grid">
                     <div>
-                        <div class="review-field-label">Assessed Subject</div>
-                        <div class="review-field-val">${rec.subject}</div>
-                    </div>
-                    <div>
                         <div class="review-field-label">Student ID</div>
-                        <div class="review-field-val">${rec.studentNumber}</div>
+                        <div class="review-field-val">${ass.studentNumber}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">Raw Score</div>
-                        <div class="review-field-val">${rec.score} out of ${rec.total}</div>
+                        <div class="review-field-label">Subject & Module</div>
+                        <div class="review-field-val">${ass.subject}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">Percentage Result</div>
-                        <div class="review-field-val">${percentage}%</div>
+                        <div class="review-field-label">Final Score</div>
+                        <div class="review-field-val">${ass.score} / ${ass.total}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">Evaluation Status</div>
-                        <div class="review-field-val" style="color: ${rec.score >= 5 ? '#16a34a' : '#dc2626'}">${rec.status}</div>
+                        <div class="review-field-label">Academic Status</div>
+                        <div class="review-field-val">${ass.status}</div>
                     </div>
                     <div>
-                        <div class="review-field-label">Date Submitted</div>
-                        <div class="review-field-val">${rec.date}</div>
+                        <div class="review-field-label">Submission Timestamp</div>
+                        <div class="review-field-val">${ass.date}</div>
                     </div>
-                </div>
-
-                <div style="background: white; border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-top: 16px;">
-                    <strong style="font-size: 0.9rem; color: var(--primary); display: block; margin-bottom: 6px;"><i class="fa-solid fa-comment-dots"></i> Teacher Evaluation Remarks:</strong>
-                    <p style="font-size: 0.88rem; color: var(--text-muted);">
-                        ${percentage >= 80 ? 'Exceptional grade achievement. The student demonstrates total mastery of the core subject concepts.' : 
-                         (percentage >= 50 ? 'Satisfactory pass mark achieved. Regular review of microeconomic principles recommended.' : 
-                         'Below required standard. Needs academic support and re-assessment consultation.')}
-                    </p>
                 </div>
             `;
-            panel.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>

@@ -1,6 +1,7 @@
 # Environment variables
 .env
 .env.*
+backend/.env
 
 # Python
 __pycache__/
@@ -18,3 +19,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# User-uploaded documents are stored outside Git in production.
+backend/uploads/

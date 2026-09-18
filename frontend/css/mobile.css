@@ -1,0 +1,75 @@
+/* Mobile-first production overrides.
+   The current prototype styles remain in index.html while the page is migrated in small, testable steps. */
+
+:root {
+    --mobile-gutter: clamp(1rem, 4vw, 2rem);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: min(100% - (var(--mobile-gutter) * 2), 1200px);
+    }
+
+    .nav-container {
+        min-height: 72px;
+    }
+
+    .logo-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .school-name {
+        font-size: 1rem;
+    }
+
+    .motto {
+        font-size: 0.75rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .hero {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .hero-banner h1 {
+        font-size: clamp(2rem, 11vw, 3rem);
+    }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+
+    .slider-wrapper {
+        height: min(58vh, 300px);
+        border-width: 2px;
+        border-radius: 12px;
+    }
+
+    .assessment {
+        margin: 1rem 0;
+        border-radius: 14px;
+        padding: 1.25rem;
+    }
+
+    .application-box,
+    .exam-body,
+    .auth-container {
+        padding: 1.25rem;
+    }
+
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+}

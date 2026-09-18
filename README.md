@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./philacoding_logo.jpg" alt="Philacoding Logo" width="180">
+<img src="./frontend/assets/images/philacoding_logo.jpg" alt="Philacoding Logo" width="180">
 
 #  Philacoding School & Organisation Digital Platforms
 
@@ -43,10 +43,10 @@ A modern school website being developed as the foundation for a broader digital 
 ### 🔗 Project Links
 
 **Live Website:**
-https://philacoding.github.io/philacoding-school-platiform/
+https://philacoding.github.io/philacoding-school-platform/
 
 **GitHub Repository:**
-https://github.com/PHILACODING/philacoding-school-platiform
+https://github.com/PHILACODING/philacoding-school-platform
 
 ---
 
@@ -223,36 +223,36 @@ The Siphesihle High School project is being developed incrementally, allowing ne
 * [x] GitHub repository
 * [x] Live deployment
 
-## Phase 2 — Online Applications 🚧
+## Phase 2 — Online Applications ✅
 
-* [ ] Application forms
-* [ ] Applicant information
-* [ ] Document submission
-* [ ] Form validation
-* [ ] Application database
-* [ ] Application status
-* [ ] Administration interface
+* [x] Application forms
+* [x] Applicant information
+* [x] Document submission
+* [x] Form validation
+* [x] Application database
+* [x] Application status
+* [x] Administration interface
 
-## Phase 3 — Online Assessments 🚧
+## Phase 3 — Online Assessments ✅
 
-* [ ] Assessment system
-* [ ] Question management
-* [ ] Learner submissions
-* [ ] Automatic marking
-* [ ] Results
-* [ ] Assessment history
+* [x] Assessment system
+* [x] Question management
+* [x] Learner submissions
+* [x] Automatic marking
+* [x] Results
+* [x] Assessment history
 
-## Phase 4 — Full-Stack Platform 🚧
+## Phase 4 — Full-Stack Platform ✅
 
-* [ ] Backend API
-* [ ] Database
-* [ ] User authentication
-* [ ] Learner accounts
+* [x] Backend API
+* [x] Database
+* [x] User authentication
+* [x] Learner accounts
 * [ ] Parent accounts
-* [ ] Teacher accounts
+* [x] Teacher accounts
 * [ ] Administrator accounts
-* [ ] Dashboards
-* [ ] Role-based access
+* [x] Dashboards
+* [x] Role-based access
 
 ## Phase 5 — Advanced Digital Services 🚀
 
@@ -434,6 +434,27 @@ Improve
   ↓
 Repeat
 ```
+
+---
+
+# 🧱 Professional Full-Stack Structure
+
+The repository now separates the working public page from the production platform layers:
+
+```text
+frontend/assets/images/   School photos and logos
+frontend/css/             Responsive presentation styles
+frontend/js/              Browser API boundary
+backend/app/              Python FastAPI service
+backend/tests/            API tests
+database/                 PostgreSQL schema and safe seed data
+docs/                     Setup and implementation guides
+scripts/                  Repeatable Windows development commands
+```
+
+The current page remains available at the repository root so the existing prototype is not broken. Read [docs/SETUP.md](docs/SETUP.md) for the complete Windows, PostgreSQL, Python, frontend, smartphone, and multi-school development process.
+
+The browser prototype still uses `localStorage` for its demo application and assessment flows. The next production steps are to add authenticated FastAPI endpoints and replace those browser writes with PostgreSQL transactions.
 
 ---
 

@@ -12,13 +12,23 @@ INSERT INTO users (school_id, full_name, email, student_number, employee_id, pas
 SELECT id, 'Demo Learner', 'learner@siphesihle.school', '26123456', NULL,
 	   'pbkdf2_sha256$210000$AXGd_wqhNVK76n7q4DrVaw$RFQ6Olg7v-4uQk_NsUwftAYa6w3yQC0tivnUnX8cZzk', 'learner'
 FROM schools WHERE slug = 'siphesihle-high-school'
-ON CONFLICT (school_id, email) DO NOTHING;
+ON CONFLICT (school_id, email) DO UPDATE
+SET full_name = EXCLUDED.full_name,
+	student_number = EXCLUDED.student_number,
+	employee_id = EXCLUDED.employee_id,
+	password_hash = EXCLUDED.password_hash,
+	role = EXCLUDED.role;
 
 INSERT INTO users (school_id, full_name, email, student_number, employee_id, password_hash, role)
 SELECT id, 'Demo Teacher', 'teacher@siphesihle.school', NULL, 'T2347233',
 	   'pbkdf2_sha256$210000$AXGd_wqhNVK76n7q4DrVaw$RFQ6Olg7v-4uQk_NsUwftAYa6w3yQC0tivnUnX8cZzk', 'teacher'
 FROM schools WHERE slug = 'siphesihle-high-school'
-ON CONFLICT (school_id, email) DO NOTHING;
+ON CONFLICT (school_id, email) DO UPDATE
+SET full_name = EXCLUDED.full_name,
+	student_number = EXCLUDED.student_number,
+	employee_id = EXCLUDED.employee_id,
+	password_hash = EXCLUDED.password_hash,
+	role = EXCLUDED.role;
 
 INSERT INTO assessment_questions (school_id, subject, question_key, prompt, answer_key)
 SELECT id, 'Economics 101', question_key, prompt, answer_key

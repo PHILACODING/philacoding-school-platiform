@@ -1626,7 +1626,9 @@
                     closeAuthModal();
                     openExamModal();
                 } catch (error) {
-                    document.getElementById('authError').textContent = 'Invalid student number or password.';
+                    document.getElementById('authError').textContent = error.status >= 500
+                        ? 'The online portal is temporarily unavailable. Please try again shortly.'
+                        : 'Invalid student number or password.';
                     document.getElementById('authError').style.display = 'block';
                 }
             } else {
@@ -1657,7 +1659,9 @@
                     closeResultsModal();
                     showStudentResults(num);
                 } catch (error) {
-                    document.getElementById('resultsAuthError').textContent = 'Invalid student number or password.';
+                    document.getElementById('resultsAuthError').textContent = error.status >= 500
+                        ? 'The results service is temporarily unavailable. Please try again shortly.'
+                        : 'Invalid student number or password.';
                     document.getElementById('resultsAuthError').style.display = 'block';
                 }
             } else {
@@ -1975,7 +1979,9 @@
                     closeTeacherAuthModal();
                     openTeacherDashboard();
                 } catch (error) {
-                    document.getElementById('teacherAuthError').textContent = 'Invalid teacher ID or password.';
+                    document.getElementById('teacherAuthError').textContent = error.status >= 500
+                        ? 'The teacher portal is temporarily unavailable. Please try again shortly.'
+                        : 'Invalid teacher ID or password.';
                     document.getElementById('teacherAuthError').style.display = 'block';
                 }
             } else {

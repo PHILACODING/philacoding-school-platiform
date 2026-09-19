@@ -14,7 +14,16 @@ async function apiRequest(path, options = {}) {
     });
 
     if (!response.ok) {
-        throw new Error(`API request failed: ${response.status}`);
+        let detail = `API request failed: ${response.status}`;
+        try {
+            const errorBody = await response.json();
+            detail = errorBody.detail || detail;
+        } catch {
+            // Keep the status-based message when the server did not return JSON.
+        }
+        const error = new Error(detail);
+        error.status = response.status;
+        throw error;
     }
 
     return response.status === 204 ? null : response.json();
